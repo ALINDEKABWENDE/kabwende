@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>À propos | Jean Alinde</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons" defer></script>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 40;
+        }
+
+        main {
+            margin-top: 96px;
+            /* pour ne pas être caché par le header */
+        }
+
+        .section-apropos {
+            background: #fff;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .section-apropos h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .section-apropos p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skills span {
+            background-color: #e0f2fe;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            color: #0369a1;
+            font-weight: 500;
+        }
+
+        footer {
+            font-size: 0.875rem;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1e3a8a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.5rem 0;
+            z-index: 50;
+        }
+
+        .bottom-nav a {
+            color: white;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        .bottom-nav i {
+            display: block;
+            margin: 0 auto 4px;
+        }
+
+        @media (min-width: 641px) {
+            .bottom-nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section-apropos h2 {
+                font-size: 2rem;
+            }
+
+            .section-apropos p {
+                font-size: 1rem;
+            }
+
+            footer {
+                padding: 1rem;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-900 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center flex-wrap gap-y-4">
+            <h1 class="text-3xl font-bold">Jean Alinde</h1>
+            <nav class="space-x-4 text-sm md:text-base hidden sm:block">
+                <a href="index.html" class="hover:underline">Accueil</a>
+                <a href="about.html" class="underline font-semibold">À propos</a>
+                <a href="projects.html" class="hover:underline">Projets</a>
+                <a href="cv.html" class="hover:underline">CV</a>
+                <a href="contact.html" class="hover:underline">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16 px-4">
+        <section class="section-apropos">
+            <h2>À propos de moi</h2>
+            <p>
+                Je suis Jean Alinde, passionné par la technologie, le développement web
+                et le droit numérique. Mon objectif est de bâtir un pont entre les
+                nouvelles technologies et la société congolaise en fournissant des
+                outils numériques accessibles, sécurisés et innovants.
+            </p>
+            <p>
+                Avec une solide formation en informatique et une curiosité insatiable,
+                je m'investis dans des projets ambitieux qui combinent rigueur technique
+                et impact social. J’aime relever des défis, apprendre constamment et
+                partager mes connaissances avec les autres.
+            </p>
+            <div class="skills">
+                <span>Développement Web</span>
+                <span>HTML &amp; CSS</span>
+                <span>JavaScript</span>
+                <span>Tailwind CSS</span>
+                <span>UX/UI</span>
+                <span>Technologie &amp; Droit</span>
+                <span>Accessibilité</span>
+                <span>Responsivité</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white text-center py-4 px-2 mt-20">
+        &copy; 2025 Jean Alinde Kabwende. Tous droits réservés.
+    </footer>
+
+    <nav class="bottom-nav sm:hidden">
+        <a href="index.html">
+            <i data-feather="home"></i><br />Accueil
+        </a>
+        <a href="about.html">
+            <i data-feather="user"></i><br />À propos
+        </a>
+        <a href="projects.html">
+            <i data-feather="briefcase"></i><br />Projets
+        </a>
+        <a href="cv.html">
+            <i data-feather="file-text"></i><br />CV
+        </a>
+        <a href="contact.html">
+            <i data-feather="mail"></i><br />Contact
+        </a>
+    </nav>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            feather.replace();
+        });
+    </script>
+</body>
+
+</html>

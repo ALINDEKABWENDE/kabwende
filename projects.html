@@ -1,0 +1,196 @@
+<!-- ===== Fichier projects.html ===== -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets | Jean Alinde</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://unpkg.com/feather-icons" defer></script>
+    <style>
+        .projects-section {
+            background-color: #ffffff;
+            padding: 4rem 1rem;
+            text-align: left;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .project-card {
+            background-color: #f1f5f9;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .project-card img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e40af;
+        }
+
+        .project-card p {
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            font-size: 0.875rem;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1e3a8a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.5rem 0;
+            z-index: 50;
+        }
+
+        .bottom-nav a {
+            color: white;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        .bottom-nav i {
+            display: block;
+            margin: 0 auto 4px;
+        }
+
+        @media (min-width: 641px) {
+            .bottom-nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .projects-section h2 {
+                font-size: 2rem;
+            }
+
+            footer {
+                padding: 1rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 40;
+        }
+
+        main {
+            margin-top: 96px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <header class="bg-blue-900 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center flex-wrap gap-y-4">
+            <h1 class="text-3xl font-bold">Jean Alinde</h1>
+            <nav class="space-x-4 text-sm md:text-base hidden sm:block">
+                <a href="index.html" class="hover:underline">Accueil</a>
+                <a href="about.html" class="hover:underline">À propos</a>
+                <a href="projects.html" class="underline font-semibold">Projets</a>
+                <a href="cv.html" class="hover:underline">CV</a>
+                <a href="contact.html" class="hover:underline">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16 px-4">
+        <section class="projects-section">
+            <h2>Mes Projets</h2>
+
+            <div class="project-card">
+                <img src="porto.png" alt="Portfolio personnel">
+                <h3>Portfolio personnel</h3>
+                <p>Un site web responsive conçu pour présenter mes compétences, expériences et projets de manière
+                    professionnelle.</p>
+            </div>
+
+            <div class="project-card">
+                <img src="masomo.png" alt="Application de gestion de tâches">
+                <h3>masomoplus</h3>
+                <p>j'ai aussi participer a la conception de 📚 MasomoPlus qui est une plateforme
+                    d’apprentissage numérique qui
+                    propose des contenus éducatifs variés pour les élèves et étudiants congolais.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <img src="vente.png" alt="Site e-commerce">
+                <h3>Application desktop de gestion vente(maquette)</h3>
+                <p>Prototype de boutique en ligne développé en HTML/CSS avec une structure moderne et optimisée mobile.
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white text-center py-4 px-2 mt-20">
+        &copy; 2025 Jean Alinde Kabwende. Tous droits réservés.
+    </footer>
+
+    <nav class="bottom-nav sm:hidden">
+        <a href="index.html">
+            <i data-feather="home"></i><br>Accueil
+        </a>
+        <a href="about.html">
+            <i data-feather="user"></i><br>À propos
+        </a>
+        <a href="projects.html">
+            <i data-feather="briefcase"></i><br>Projets
+        </a>
+        <a href="cv.html">
+            <i data-feather="file-text"></i><br>CV
+        </a>
+        <a href="contact.html">
+            <i data-feather="mail"></i><br>Contact
+        </a>
+    </nav>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            feather.replace();
+        });
+    </script>
+</body>
+
+</html>
