@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accueil | Jean Alinde</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons" defer></script>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 40;
+        }
+
+        main {
+            margin-top: 96px;
+            /* espace pour header fixe */
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            max-width: 900px;
+            margin: auto;
+            padding: 4rem 2rem 4rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-text {
+            flex: 1 1 300px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: #fff;
+            color: #1e3a8a;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 5px 10px rgba(59, 130, 246, 0.5);
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #e0e7ff;
+        }
+
+        .hero-photo {
+            flex: 0 0 180px;
+            max-width: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease;
+            cursor: pointer;
+            margin: auto;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-photo:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1e3a8a;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.5rem 0;
+            z-index: 50;
+        }
+
+        .bottom-nav a {
+            color: white;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+
+        .bottom-nav i {
+            display: block;
+            margin: 0 auto 4px;
+        }
+
+        @media (min-width: 641px) {
+            .bottom-nav {
+                display: none;
+            }
+
+            .hero {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            footer {
+                padding: 1rem;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-900 text-white p-6">
+        <div class="container mx-auto flex justify-between items-center flex-wrap gap-y-4">
+            <h1 class="text-3xl font-bold">Jean Alinde</h1>
+            <nav class="space-x-4 text-sm md:text-base hidden sm:block">
+                <a href="index.html" class="underline font-semibold">Accueil</a>
+                <a href="about.html" class="hover:underline">À propos</a>
+                <a href="projects.html" class="hover:underline">Projets</a>
+                <a href="cv.html" class="hover:underline">CV</a>
+                <a href="contact.html" class="hover:underline">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="px-4">
+        <section class="hero">
+            <div class="hero-photo">
+                <img src="alinde.jpg" alt="Photo de Jean Alinde" />
+            </div>
+            <div class="hero-text">
+                <h1>Bienvenue sur mon portfolio</h1>
+                <p>
+                    Je suis Jean Alinde, développeur web passionné et créateur de solutions
+                    numériques innovantes. Découvrez mes projets, mon parcours et n’hésitez
+                    pas à me contacter !
+                </p>
+                <a href="projects.html" class="btn-primary">Voir mes projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white text-center py-4 px-2 mt-20">
+        &copy; 2025 Jean Alinde Kabwende. Tous droits réservés.
+    </footer>
+
+    <nav class="bottom-nav sm:hidden">
+        <a href="index.html">
+            <i data-feather="home"></i><br />Accueil
+        </a>
+        <a href="about.html">
+            <i data-feather="user"></i><br />À propos
+        </a>
+        <a href="projects.html">
+            <i data-feather="briefcase"></i><br />Projets
+        </a>
+        <a href="cv.html">
+            <i data-feather="file-text"></i><br />CV
+        </a>
+        <a href="contact.html">
+            <i data-feather="mail"></i><br />Contact
+        </a>
+    </nav>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            feather.replace();
+        });
+    </script>
+</body>
+
+</html>
