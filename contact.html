@@ -1,11 +1,12 @@
+<!-- ===== Fichier contact.html ===== -->
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Jean Alinde</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <script src="https://unpkg.com/feather-icons" defer></script>
     <style>
         header {
@@ -17,65 +18,6 @@
 
         main {
             margin-top: 96px;
-            /* espace pour le header fixe */
-        }
-
-        .contact-section {
-            background: #fff;
-            max-width: 600px;
-            margin: auto;
-            padding: 3rem 1rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            text-align: left;
-        }
-
-        .contact-section h2 {
-            font-size: 2.5rem;
-            color: #1e3a8a;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #1e40af;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1.25rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 0.375rem;
-            font-size: 1rem;
-            font-family: inherit;
-            resize: vertical;
-        }
-
-        button {
-            background-color: #1e3a8a;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 0.375rem;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #3b82f6;
-        }
-
-        footer {
-            font-size: 0.875rem;
-            text-align: center;
         }
 
         .bottom-nav {
@@ -107,17 +49,6 @@
                 display: none;
             }
         }
-
-        @media (max-width: 640px) {
-            .contact-section h2 {
-                font-size: 2rem;
-            }
-
-            footer {
-                padding: 1rem;
-                font-size: 0.75rem;
-            }
-        }
     </style>
 </head>
 
@@ -136,19 +67,19 @@
     </header>
 
     <main class="py-16 px-4">
-        <section class="contact-section">
-            <h2>Contactez-moi</h2>
-            <form action="#" method="POST">
-                <label for="name">Nom complet</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required />
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="votre.email@example.com" required />
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
-
-                <button type="submit">Envoyer</button>
+        <section class="max-w-2xl mx-auto bg-white p-8 rounded shadow">
+            <h2 class="text-2xl font-bold text-center text-blue-900 mb-6">Contactez-moi</h2>
+            <form class="space-y-4" id="contactForm">
+                <input type="text" id="nom" placeholder="Nom" class="w-full p-2 border border-gray-300 rounded"
+                    required>
+                <input type="email" id="email" placeholder="Email" class="w-full p-2 border border-gray-300 rounded"
+                    required>
+                <textarea id="message" placeholder="Votre message" class="w-full p-2 border border-gray-300 rounded"
+                    rows="5" required></textarea>
+                <button type="button" onclick="envoyerWhatsApp()"
+                    class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+                    Envoyer sur WhatsApp
+                </button>
             </form>
         </section>
     </main>
@@ -159,26 +90,37 @@
 
     <nav class="bottom-nav sm:hidden">
         <a href="index.html">
-            <i data-feather="home"></i><br />Accueil
+            <i data-feather="home"></i><br>Accueil
         </a>
         <a href="about.html">
-            <i data-feather="user"></i><br />À propos
+            <i data-feather="user"></i><br>À propos
         </a>
         <a href="projects.html">
-            <i data-feather="briefcase"></i><br />Projets
+            <i data-feather="briefcase"></i><br>Projets
         </a>
         <a href="cv.html">
-            <i data-feather="file-text"></i><br />CV
+            <i data-feather="file-text"></i><br>CV
         </a>
         <a href="contact.html">
-            <i data-feather="mail"></i><br />Contact
+            <i data-feather="mail"></i><br>Contact
         </a>
     </nav>
 
     <script>
-        window.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener('DOMContentLoaded', () => {
             feather.replace();
         });
+
+        function envoyerWhatsApp() {
+            const nom = document.getElementById('nom').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            const texte = encodeURIComponent(`Bonjour Jean, je vous contacte depuis votre portfolio.\nNom: ${nom}\nEmail: ${email}\nMessage: ${message}`);
+            const url = `https://wa.me/243971185261?text=${texte}`;
+
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 
