@@ -3,125 +3,123 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Jean Alinde</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script src="https://unpkg.com/feather-icons" defer></script>
-    <style>
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 40;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jean Alinde</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="https://unpkg.com/feather-icons" defer></script>
+  <style>
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 40;
+    }
 
-        main {
-            margin-top: 96px;
-        }
+    main {
+      margin-top: 96px;
+    }
 
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #1e3a8a;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 0.5rem 0;
-            z-index: 50;
-        }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.5rem 0;
+      z-index: 50;
+    }
 
-        .bottom-nav a {
-            color: white;
-            text-align: center;
-            font-size: 0.75rem;
-        }
+    .bottom-nav a {
+      color: white;
+      text-align: center;
+      font-size: 0.75rem;
+    }
 
-        .bottom-nav i {
-            display: block;
-            margin: 0 auto 4px;
-        }
+    .bottom-nav i {
+      display: block;
+      margin: 0 auto 4px;
+    }
 
-        @media (min-width: 641px) {
-            .bottom-nav {
-                display: none;
-            }
-        }
-    </style>
+    @media (min-width: 641px) {
+      .bottom-nav {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
-    <header class="bg-blue-900 text-white p-6">
-        <div class="container mx-auto flex justify-between items-center flex-wrap gap-y-4">
-            <h1 class="text-3xl font-bold">Jean Alinde</h1>
-            <nav class="space-x-4 text-sm md:text-base hidden sm:block">
-                <a href="index.html" class="hover:underline">Accueil</a>
-                <a href="about.html" class="hover:underline">À propos</a>
-                <a href="projects.html" class="hover:underline">Projets</a>
-                <a href="cv.html" class="hover:underline">CV</a>
-                <a href="contact.html" class="underline font-semibold">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header class="bg-blue-900 text-white p-6">
+    <div class="container mx-auto flex justify-between items-center flex-wrap gap-y-4">
+      <h1 class="text-3xl font-bold">Jean Alinde</h1>
+      <nav class="space-x-4 text-sm md:text-base hidden sm:block">
+        <a href="index.html" class="hover:underline">Accueil</a>
+        <a href="about.html" class="hover:underline">À propos</a>
+        <a href="projects.html" class="hover:underline">Projets</a>
+        <a href="cv.html" class="hover:underline">CV</a>
+        <a href="contact.html" class="underline font-semibold">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="py-16 px-4">
-        <section class="max-w-2xl mx-auto bg-white p-8 rounded shadow">
-            <h2 class="text-2xl font-bold text-center text-blue-900 mb-6">Contactez-moi</h2>
-            <form class="space-y-4" id="contactForm">
-                <input type="text" id="nom" placeholder="Nom" class="w-full p-2 border border-gray-300 rounded"
-                    required>
-                <input type="email" id="email" placeholder="Email" class="w-full p-2 border border-gray-300 rounded"
-                    required>
-                <textarea id="message" placeholder="Votre message" class="w-full p-2 border border-gray-300 rounded"
-                    rows="5" required></textarea>
-                <button type="button" onclick="envoyerWhatsApp()"
-                    class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
-                    Envoyer sur WhatsApp
-                </button>
-            </form>
-        </section>
-    </main>
+  <main class="py-16 px-4">
+    <section class="max-w-2xl mx-auto bg-white p-8 rounded shadow">
+      <h2 class="text-2xl font-bold text-center text-blue-900 mb-6">Contactez-moi</h2>
+      <form class="space-y-4" id="contactForm">
+        <input type="text" id="nom" placeholder="Nom" class="w-full p-2 border border-gray-300 rounded" required>
+        <input type="email" id="email" placeholder="Email" class="w-full p-2 border border-gray-300 rounded" required>
+        <textarea id="message" placeholder="Votre message" class="w-full p-2 border border-gray-300 rounded" rows="5"
+          required></textarea>
+        <button type="button" onclick="envoyerWhatsApp()"
+          class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
+          Envoyer sur WhatsApp
+        </button>
+      </form>
+    </section>
+  </main>
 
-    <footer class="bg-blue-900 text-white text-center py-4 px-2 mt-20">
-        &copy; 2025 Jean Alinde Kabwende. Tous droits réservés.
-    </footer>
+  <footer class="bg-blue-900 text-white text-center py-4 px-2 mt-20">
+    &copy; 2025 Jean Alinde Kabwende. Tous droits réservés.
+  </footer>
 
-    <nav class="bottom-nav sm:hidden">
-        <a href="index.html">
-            <i data-feather="home"></i><br>Accueil
-        </a>
-        <a href="about.html">
-            <i data-feather="user"></i><br>À propos
-        </a>
-        <a href="projects.html">
-            <i data-feather="briefcase"></i><br>Projets
-        </a>
-        <a href="cv.html">
-            <i data-feather="file-text"></i><br>CV
-        </a>
-        <a href="contact.html">
-            <i data-feather="mail"></i><br>Contact
-        </a>
-    </nav>
+  <nav class="bottom-nav sm:hidden">
+    <a href="index.html">
+      <i data-feather="home"></i><br>Accueil
+    </a>
+    <a href="about.html">
+      <i data-feather="user"></i><br>À propos
+    </a>
+    <a href="projects.html">
+      <i data-feather="briefcase"></i><br>Projets
+    </a>
+    <a href="cv.html">
+      <i data-feather="file-text"></i><br>CV
+    </a>
+    <a href="contact.html">
+      <i data-feather="mail"></i><br>Contact
+    </a>
+  </nav>
 
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            feather.replace();
-        });
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      feather.replace();
+    });
 
-        function envoyerWhatsApp() {
-            const nom = document.getElementById('nom').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
+    function envoyerWhatsApp() {
+      const nom = document.getElementById('nom').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
 
-            const texte = encodeURIComponent(`Bonjour Jean, je vous contacte depuis votre portfolio.\nNom: ${nom}\nEmail: ${email}\nMessage: ${message}`);
-            const url = `https://wa.me/243971185261?text=${texte}`;
+      const texte = encodeURIComponent(`Bonjour Jean, je vous contacte depuis votre portfolio.\nNom: ${nom}\nEmail: ${email}\nMessage: ${message}`);
+      const url = `https://wa.me/243971185261?text=${texte}`;
 
-            window.open(url, '_blank');
-        }
-    </script>
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 
 </html>
